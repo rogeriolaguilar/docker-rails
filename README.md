@@ -10,6 +10,15 @@ To use some of this images in your Rails project
 FROM rogeriolaguilar/ruby:2.5.3
 ```
 
+By default the application runs in port 8080, to change it:
+
+```shell
+FROM rogeriolaguilar/ruby:2.5.3
+
+EXPOSE 3000
+CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3000"]
+```
+
 2 - Create a file "entrypoint.sh" in the root of the repository
 
 ```shell
